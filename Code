@@ -60,7 +60,6 @@ class ZnanieForm(forms.ModelForm):
         cleaned_data['meta'] = meta
         return cleaned_data
 
-json
 {
   "algoritm": {
     "number_of_jobs": 1,
