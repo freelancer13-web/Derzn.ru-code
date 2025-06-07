@@ -6,7 +6,7 @@ class Znanie(models.Model):
     
     title = models.CharField(max_length=255)
     type = models.ForeignKey('ZnanieType', on_delete=models.CASCADE)
-    # several_jobs = models.BooleanField(default=False)  # УДАЛЯЕМ
+    several_jobs = models.BooleanField(default=False)  # УДАЛЯЕМ
     
     meta = models.JSONField(default=dict, blank=True)
 
@@ -14,7 +14,7 @@ class Znanie(models.Model):
    python manage.py migrate
 
 class Znanie(models.Model):
-    # ...
+    
 
     def is_multiple_jobs(self):
         return self.meta.get('algoritm', {}).get('number_of_jobs', 0) == 1
