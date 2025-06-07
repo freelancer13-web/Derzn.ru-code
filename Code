@@ -1,6 +1,6 @@
 models.py
 from django.db import models
-from django.contrib.postgres.fields import JSONField  # если используете PostgreSQL
+from django.contrib.postgres.fields import JSONField 
 
 class Znanie(models.Model):
     
@@ -37,7 +37,7 @@ class ZnanieAdmin(admin.ModelAdmin):
         import json
         return json.dumps(obj.meta, indent=2, ensure_ascii=False)
 
-шаблон: templates/algoritm_detail.html (или где отображается знание)
+templates/algoritm_detail.html 
 {% if znanie.is_adaptation_allowed %}
     <a href="{% url 'adaptation_page' znanie.id %}" class="btn btn-primary">Адаптация под себя</a>
 {% endif %}
