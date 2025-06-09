@@ -6,7 +6,7 @@ class Znanie(models.Model):
     
     title = models.CharField(max_length=255)
     type = models.ForeignKey('ZnanieType', on_delete=models.CASCADE)
-    several_jobs = models.BooleanField(default=False) 
+    
     
     meta = models.JSONField(default=dict, blank=True)
 
